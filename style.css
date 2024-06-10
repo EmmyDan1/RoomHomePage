@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    /* height: 100vh; */
+    justify-content: space-between;
+}
+
+.background {
+    width: 100%;
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.menu-icon,
+.close-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.logo {}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    margin-left: 50px;
+    margin-top: -4px;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+}
+
+.navbar ul li.home a::after {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    display: block;
+    transition: width 0.3s ease;
+    left: 0;
+    bottom: -10px;
+}
+
+.navbar ul li.home a:hover::after {
+    width: 100%;
+}
+
+
+.side-content {
+    width: 100%;
+    height: 500px;
+    max-width: 637px;
+    background-color: white;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    position: relative;
+    display: flex;
+}
+
+.side-content h1 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.side-content p {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#textContent {
+    margin: auto;
+}
+
+#textContent h1,
+#textContent p {
+    width: 400px;
+}
+
+
+.slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 30px;
+    width: 130px;
+    padding: 13px;
+    text-align: center;
+    background-color: black;
+}
+
+.Ptexts {
+    margin-top: 20px;
+    display: block;
+}
+
+.shopNow {
+    margin-top: 20px;
+    display: flex;
+    color: black;
+}
+
+.shopNow a {
+    color: black;
+}
+
+.shopNow a:hover {
+    color: black;
+    opacity: 0.3;
+}
+
+.shopNow .arrow {
+    margin-left: 20px;
+    margin-top: -3px;
+    color: black;
+}
+
+.box-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box2 {
+    width: 400px;
+    margin: auto;
+}
+
+.box2 p {
+    margin-top: 20px;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+@media(max-width: 490px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .menu-icon {
+        display: block;
+        color: white;
+        margin-left: -15px;
+    }
+
+    header .logo {
+        margin-left: 120px;
+    }
+
+    .navbar ul li a {
+        color: black
+    }
+
+
+
+    .navbar .nav-links {
+        display: none;
+        position: absolute;
+        width: 600px;
+        background-color: white;
+        color: black;
+        top: 0;
+        left: -59px;
+        padding: 40px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .close-icon.active {
+        display: block;
+        margin-right: 24px;
+        margin-top: -6px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .background img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .side-content {
+        /* margin-bottom: -110px; */
+        height: 300px;
+    }
+
+    .side-content h1 {
+        margin-bottom: 15px;
+    }
+
+    .slider {
+        position: absolute;
+        margin-bottom: 300px;
+        margin-left: 320px;
+    }
+
+    #textContent h1 {
+        margin-left: 30px;
+    }
+
+    #textContent p {
+        margin-left: 30px;
+    }
+
+    .shopNow {
+        margin-left: 30px;
+    }
+
+    .box-cont {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .box-cont .box1 {
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .box-cont .box2 {
+        margin-bottom: 30px;
+    }
+
+    .box-cont .box3 {
+        margin: auto;
+    }
+
+
+
+}
