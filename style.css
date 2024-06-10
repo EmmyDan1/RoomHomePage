@@ -224,6 +224,8 @@ header {
     .background img {
         width: 100%;
         height: 400px;
+        margin: auto;
+        max-width: 600px;
     }
 
     .side-content {
